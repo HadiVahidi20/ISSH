@@ -1,0 +1,1930 @@
+<!-- ================================================= -->
+<!-- ISSH Home Page - Go High Level Custom Code      -->
+<!-- ================================================= -->
+<!--                                                    -->
+<!-- HOW TO USE IN GHL:                                 -->
+<!-- 1. Upload all images from the "images" folder to   -->
+<!--    GHL Media Library or an external CDN            -->
+<!-- 2. Find & replace all image paths below:           -->
+<!--    - src="images/..." attributes                   -->
+<!--    - url('images/...') in inline styles           -->
+<!--    Replace with your hosted image URLs             -->
+<!-- 3. Update internal page links:                     -->
+<!--    - href="enquire.html" -> your GHL enquire URL   -->
+<!--    - href="index.html"   -> your GHL home URL     -->
+<!--    - href="index.html#section" -> full GHL URLs    -->
+<!-- 4. Paste this entire code into a "Custom Code"     -->
+<!--    (or "Code" / "HTML") element in your GHL        -->
+<!--    funnel or website page builder                  -->
+<!-- 5. If using GHL's own header/footer, you can      -->
+<!--    remove the <header> and <footer> sections below -->
+<!--                                                    -->
+<!-- ================================================= -->
+
+<style>
+
+/* ===================================================
+   ISSH Landing Page - Matching issh.ch branding
+   Colors: Navy #0b2a60, Teal #015f6a, Beige #f4f2ef
+   Fonts: Stolzl (via Adobe Typekit), Arsenica Variable
+   =================================================== */
+
+/* --- Font Face Declarations (Stolzl from Typekit) --- */
+@font-face {
+  font-display: swap;
+  font-family: stolzl;
+  font-style: normal;
+  font-weight: 100;
+  src: url(https://use.typekit.net/af/f5ea15/00000000000000007753c396/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+       url(https://use.typekit.net/af/f5ea15/00000000000000007753c396/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: stolzl;
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://use.typekit.net/af/586695/00000000000000007753c398/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+       url(https://use.typekit.net/af/586695/00000000000000007753c398/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: stolzl;
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://use.typekit.net/af/e58fc3/00000000000000007753c397/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+       url(https://use.typekit.net/af/e58fc3/00000000000000007753c397/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: stolzl;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://use.typekit.net/af/2f17eb/00000000000000007753c395/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+       url(https://use.typekit.net/af/2f17eb/00000000000000007753c395/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: stolzl;
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://use.typekit.net/af/32bb89/00000000000000007753c394/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+       url(https://use.typekit.net/af/32bb89/00000000000000007753c394/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: stolzl;
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://use.typekit.net/af/bee409/00000000000000007753c399/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+       url(https://use.typekit.net/af/bee409/00000000000000007753c399/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: arsenica-variable;
+  font-style: italic;
+  font-weight: 100 800;
+  src: url(https://use.typekit.net/af/d8f973/0000000000000000774afb61/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+       url(https://use.typekit.net/af/d8f973/0000000000000000774afb61/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: arsenica-variable;
+  font-style: normal;
+  font-weight: 100 800;
+  src: url(https://use.typekit.net/af/2f4c2a/0000000000000000774afb64/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+       url(https://use.typekit.net/af/2f4c2a/0000000000000000774afb64/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+}
+
+/* --- GHL Full-Width Override --- */
+/* Forces content to break out of GHL's container constraints */
+.issh-wrap {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  overflow-x: hidden;
+}
+
+/* --- CSS Variables --- */
+.issh-wrap {
+  --navy: #0b2a60;
+  --navy-dark: #010e4d;
+  --navy-mid: #1b375c;
+  --teal: #015f6a;
+  --teal-light: #017a87;
+  --beige: #f4f2ef;
+  --white: #ffffff;
+  --black: #1a1a1a;
+  --grey: #6b7280;
+  --grey-light: #9ca3af;
+  --accent-yellow: #edf869;
+  --purple-grey: #c2c0d9;
+  --line: rgba(27, 55, 92, 0.12);
+  --font-primary: stolzl, sans-serif;
+  --font-secondary: arsenica-variable, Georgia, serif;
+  --container-max: 1340px;
+  --header-height: 80px;
+}
+
+/* --- Reset & Base --- */
+.issh-wrap,
+.issh-wrap *,
+.issh-wrap *::before,
+.issh-wrap *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.issh-wrap {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.issh-wrap {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--black);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+.issh-wrap.menu-open {
+  overflow: hidden;
+}
+
+.issh-wrap a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.issh-wrap img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.issh-wrap ul {
+  list-style: none;
+}
+
+.issh-wrap h1, .issh-wrap h2, .issh-wrap h3, .issh-wrap h4 {
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.container {
+  width: min(100% - 60px, var(--container-max));
+  margin: 0 auto;
+}
+
+/* ===================================================
+   HEADER
+   =================================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+  height: var(--header-height);
+}
+
+.site-header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom-color: var(--line);
+  box-shadow: 0 2px 20px rgba(11, 42, 96, 0.06);
+}
+
+.header-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header-logo {
+  flex-shrink: 0;
+}
+
+.header-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.main-nav a {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--navy-dark);
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.main-nav a:hover {
+  background: var(--beige);
+  color: var(--teal);
+}
+
+.header-ctas {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.header-btn {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 9px 20px;
+  border-radius: 6px;
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+
+.header-btn--outline {
+  color: var(--navy);
+  border: 1.5px solid var(--navy);
+}
+
+.header-btn--outline:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.header-btn--filled {
+  background: var(--teal);
+  color: var(--white);
+  border: 1.5px solid var(--teal);
+}
+
+.header-btn--filled:hover {
+  background: var(--teal-light);
+  border-color: var(--teal-light);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 110;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.mobile-nav a {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--navy);
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mobile-nav a:hover {
+  background: var(--beige);
+  color: var(--teal);
+}
+
+.mobile-ctas {
+  display: flex;
+  gap: 12px;
+}
+
+.mobile-ctas .header-btn {
+  font-size: 16px;
+  padding: 12px 28px;
+}
+
+/* ===================================================
+   HERO
+   =================================================== */
+.hero {
+  position: relative;
+  height: 85vh;
+  min-height: 500px;
+  max-height: 800px;
+  margin-top: var(--header-height);
+  overflow: hidden;
+}
+
+.hero-carousel {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(1, 14, 77, 0.75) 0%,
+    rgba(11, 42, 96, 0.5) 40%,
+    rgba(11, 42, 96, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 60px, var(--container-max));
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content .hero-eyebrow,
+.hero-content h1,
+.hero-content .hero-lead,
+.hero-content .hero-buttons {
+  max-width: 650px;
+}
+
+.hero-eyebrow {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-yellow);
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 4vw + 10px, 52px);
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero-lead {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0;
+}
+
+.dot.active {
+  background: var(--white);
+  border-color: var(--white);
+}
+
+.dot:hover {
+  border-color: var(--white);
+}
+
+/* ===================================================
+   BUTTONS
+   =================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 30px;
+  border-radius: 6px;
+  font-family: var(--font-primary);
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-align: center;
+}
+
+.btn--primary {
+  background: var(--teal);
+  color: var(--white);
+}
+
+.btn--primary:hover {
+  background: var(--teal-light);
+}
+
+.btn--secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: var(--white);
+}
+
+.btn--teal {
+  background: var(--teal);
+  color: var(--white);
+}
+
+.btn--teal:hover {
+  background: var(--teal-light);
+}
+
+.btn--accent {
+  background: var(--accent-yellow);
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.btn--accent:hover {
+  background: #e0eb5c;
+}
+
+/* ===================================================
+   FACTS STRIP
+   =================================================== */
+.facts-strip {
+  background: var(--navy);
+  padding: 40px 0;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.fact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fact-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent-yellow);
+  line-height: 1;
+}
+
+.fact-text {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ===================================================
+   SECTIONS
+   =================================================== */
+.section {
+  padding: 100px 0;
+}
+
+.section--beige {
+  background: var(--beige);
+}
+
+.section--navy {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.section--navy h2 {
+  color: var(--white);
+}
+
+.section--navy p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 10px;
+}
+
+.section-label--light {
+  color: var(--accent-yellow);
+}
+
+.section-header {
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: clamp(28px, 3vw + 5px, 36px);
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.section--navy .section-header h2 {
+  color: var(--white);
+}
+
+.section-desc {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--grey);
+  line-height: 1.7;
+}
+
+.section--navy .section-desc {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ===================================================
+   SPLIT LAYOUT (About / Boarding)
+   =================================================== */
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.split-layout--reverse .split-image {
+  order: 2;
+}
+
+.split-layout--reverse .split-content {
+  order: 1;
+}
+
+.split-image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.split-content h2 {
+  font-size: clamp(26px, 3vw, 34px);
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+
+.split-content > p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--grey);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.feature-list {
+  margin-bottom: 30px;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+/* ===================================================
+   PROGRAMME CARDS
+   =================================================== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.programme-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(11, 42, 96, 0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.programme-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(11, 42, 96, 0.12);
+}
+
+.programme-card__image {
+  overflow: hidden;
+  height: 220px;
+}
+
+.programme-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.programme-card:hover .programme-card__image img {
+  transform: scale(1.05);
+}
+
+.programme-card__body {
+  padding: 24px;
+}
+
+.programme-card__body h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.programme-card__body p {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+/* ===================================================
+   HIGHLIGHT BANNER (IB Results)
+   =================================================== */
+.highlight-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.highlight-text {
+  max-width: 600px;
+}
+
+.highlight-text h2 {
+  font-size: clamp(28px, 3vw, 36px);
+  margin-bottom: 16px;
+}
+
+.highlight-text p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.stat-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-value {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--accent-yellow);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+}
+
+/* ===================================================
+   HOLIDAY CAMPS
+   =================================================== */
+.camps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.camp-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 36px 30px;
+  box-shadow: 0 4px 24px rgba(11, 42, 96, 0.06);
+  border-top: 4px solid var(--teal);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.camp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(11, 42, 96, 0.12);
+}
+
+.camp-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.camp-card p {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+/* ===================================================
+   GALLERY
+   =================================================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.gallery-item {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-item--wide {
+  grid-column: span 2;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  background: linear-gradient(to top, rgba(1, 14, 77, 0.7), transparent);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* ===================================================
+   COMMUNITY
+   =================================================== */
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.community-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 36px 30px;
+  box-shadow: 0 4px 24px rgba(11, 42, 96, 0.06);
+  transition: transform 0.3s;
+}
+
+.community-card:hover {
+  transform: translateY(-4px);
+}
+
+.community-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--teal);
+  margin-bottom: 20px;
+}
+
+.community-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.community-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.community-card p {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+/* ===================================================
+   ADMISSIONS CTA
+   =================================================== */
+.admissions-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.admissions-layout--centered {
+  grid-template-columns: 1fr;
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.admissions-content h2 {
+  font-size: clamp(28px, 3vw, 36px);
+  margin-bottom: 16px;
+}
+
+.admissions-content p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.admissions-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cta-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 24px;
+  transition: background 0.25s, border-color 0.25s;
+}
+
+.cta-card:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.cta-card__title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--white);
+  display: block;
+}
+
+.cta-card__desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.65);
+  display: block;
+  margin-top: 3px;
+}
+
+.cta-card__arrow {
+  margin-left: auto;
+  font-size: 24px;
+  color: var(--accent-yellow);
+  transition: transform 0.25s;
+  flex-shrink: 0;
+}
+
+.cta-card:hover .cta-card__arrow {
+  transform: translateX(4px);
+}
+
+/* ===================================================
+   ENQUIRE PAGE
+   =================================================== */
+.page-hero {
+  background: var(--navy);
+  padding: 120px 0 60px;
+  margin-top: var(--header-height);
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: clamp(32px, 4vw + 10px, 48px);
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.page-hero__lead {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.enquire-form-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-placeholder {
+  background: var(--beige);
+  border: 2px dashed var(--line);
+  border-radius: 12px;
+  padding: 60px 30px;
+  text-align: center;
+  color: var(--grey);
+  font-size: 16px;
+}
+
+.contact-grid {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  text-align: center;
+}
+
+.contact-card h3 {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.contact-card > p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--grey);
+  margin-bottom: 24px;
+}
+
+.contact-details p {
+  font-size: 15px;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.contact-details a {
+  color: var(--teal);
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* ===================================================
+   FOOTER
+   =================================================== */
+.site-footer {
+  background: var(--navy-dark);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 60px 0 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-logo {
+  height: 45px;
+  width: auto;
+  margin-bottom: 16px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-brand p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.footer-col h4 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col a {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s;
+}
+
+.footer-col a:hover {
+  color: var(--accent-yellow);
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  transition: background 0.25s, color 0.25s;
+}
+
+.social-link:hover {
+  background: var(--teal);
+  color: var(--white);
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===================================================
+   RESPONSIVE
+   =================================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .main-nav {
+    display: none;
+  }
+
+  .header-ctas {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .split-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .split-layout--reverse .split-image {
+    order: 0;
+  }
+
+  .split-layout--reverse .split-content {
+    order: 0;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-item--wide {
+    grid-column: span 2;
+  }
+
+  .admissions-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .highlight-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-content .hero-eyebrow,
+  .hero-content h1,
+  .hero-content .hero-lead,
+  .hero-content .hero-buttons {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .issh-wrap {
+    --header-height: 64px;
+  }
+
+  .container {
+    width: min(100% - 40px, var(--container-max));
+  }
+
+  .header-inner {
+    padding: 0 20px;
+  }
+
+  .header-logo img {
+    height: 38px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .hero {
+    height: 75vh;
+    min-height: 420px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero-lead {
+    font-size: 15px;
+  }
+
+  .facts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .fact-number {
+    font-size: 26px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .camps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .community-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item--wide {
+    grid-column: span 1;
+  }
+
+  .split-image img {
+    height: 300px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-header {
+    margin-bottom: 36px;
+  }
+
+  .section-header h2 {
+    font-size: 26px;
+  }
+
+  .stat-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .stat-value {
+    font-size: 32px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide {
+    transition: none;
+  }
+
+  .programme-card,
+  .camp-card,
+  .community-card,
+  .cta-card {
+    transition: none;
+  }
+
+  .programme-card:hover,
+  .camp-card:hover,
+  .community-card:hover {
+    transform: none;
+  }
+
+  .programme-card:hover .programme-card__image img,
+  .gallery-item:hover img {
+    transform: none;
+  }
+
+  .issh-wrap {
+    scroll-behavior: auto;
+  }
+}
+
+
+</style>
+
+<div class="issh-wrap">
+<!-- Header -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="header-logo">
+          <!-- IMAGE: Header logo -->
+          <img src="images/logo.svg" alt="International School of Schaffhausen" />
+        </a>
+
+        <nav class="main-nav" id="mainNav">
+          <a href="#about">About ISSH</a>
+          <a href="#admissions">Admissions</a>
+          <a href="#programmes">School Life &amp; Academics</a>
+          <a href="#boarding">Boarding Programme</a>
+          <a href="#camps">Holiday Camps</a>
+          <a href="#community">Our Community</a>
+        </nav>
+
+        <div class="header-ctas">
+          <a href="#admissions" class="header-btn header-btn--filled">Enquire</a>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-nav">
+        <a href="#about">About ISSH</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#programmes">School Life &amp; Academics</a>
+        <a href="#boarding">Boarding Programme</a>
+        <a href="#camps">Holiday Camps</a>
+        <a href="#community">Our Community</a>
+      </nav>
+      <div class="mobile-ctas">
+        <a href="#admissions" class="header-btn header-btn--filled">Enquire</a>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero Carousel -->
+      <section class="hero">
+        <div class="hero-carousel" id="heroCarousel">
+          <!-- IMAGE: Hero slide 1 background -->
+          <div class="hero-slide active" style="background-image: url('images/ISSH-UpperSchoolScience-Final.jpg')"></div>
+          <!-- IMAGE: Hero slide 2 background -->
+          <div class="hero-slide" style="background-image: url('images/ISSH-Library-Final.jpg')"></div>
+          <!-- IMAGE: Hero slide 3 background -->
+          <div class="hero-slide" style="background-image: url('images/ISSH-EarlyYears-Final.jpg')"></div>
+          <!-- IMAGE: Hero slide 4 background -->
+          <div class="hero-slide" style="background-image: url('images/ISSH-Nursery-Final.jpg')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-eyebrow">IB World School &middot; Schaffhausen, Switzerland</p>
+          <h1>Where every student thrives in a global learning community</h1>
+          <p class="hero-lead">
+            A non-profit private day and boarding school offering English-language IB education for ages 3 to 19.
+          </p>
+          <div class="hero-buttons">
+            <a href="#admissions" class="btn btn--primary">Enquire</a>
+            <a href="#programmes" class="btn btn--secondary">Explore programmes</a>
+          </div>
+        </div>
+        <div class="hero-dots" id="heroDots">
+          <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+          <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+          <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+          <button class="dot" data-slide="3" aria-label="Slide 4"></button>
+        </div>
+      </section>
+
+      <!-- Key Facts Strip -->
+      <section class="facts-strip">
+        <div class="container">
+          <div class="facts-grid">
+            <div class="fact-item">
+              <span class="fact-number">3-19</span>
+              <span class="fact-text">Ages served</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-number">IB</span>
+              <span class="fact-text">PYP &middot; Pre-IB &middot; DP</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-number">100%</span>
+              <span class="fact-text">IB Diploma pass rate</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-number">40+</span>
+              <span class="fact-text">Nationalities</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About ISSH -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="split-layout">
+            <div class="split-image">
+              <!-- IMAGE: About ISSH split image -->
+              <img
+                src="images/why-issh-body-000.jpg"
+                alt="ISSH campus and students"
+                loading="lazy"
+              />
+            </div>
+            <div class="split-content">
+              <p class="section-label">About ISSH</p>
+              <h2>Why ISSH?</h2>
+              <p>
+                The International School of Schaffhausen provides a caring, personalised
+                learning environment where every student is seen and supported. With small
+                classes and dedicated teachers, we deliver a world-class IB education in
+                the heart of Northern Switzerland.
+              </p>
+              <ul class="feature-list">
+                <li>English-language education within the IB framework</li>
+                <li>Personalised learning with small class sizes</li>
+                <li>International families alongside local Swiss families</li>
+                <li>A safe, caring environment focused on whole-child growth</li>
+              </ul>
+              <a href="#programmes" class="btn btn--teal">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IB Programmes -->
+      <section id="programmes" class="section section--beige">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-label">School Life &amp; Academics</p>
+            <h2>IB Programmes</h2>
+            <p class="section-desc">
+              The IB framework runs across all divisions, with a focus on inquiry,
+              critical thinking, intercultural understanding, and student agency.
+            </p>
+          </div>
+          <div class="cards-grid">
+            <article class="programme-card">
+              <div class="programme-card__image">
+                <!-- IMAGE: Programme card - Early Learning Centre -->
+                <img src="images/early-years.jpg" alt="Early Years learning" loading="lazy" />
+              </div>
+              <div class="programme-card__body">
+                <h3>Early Learning Centre</h3>
+                <p>
+                  Nurturing curiosity and confidence through play-based, inquiry-led
+                  learning for our youngest learners ages 3-5.
+                </p>
+              </div>
+            </article>
+            <article class="programme-card">
+              <div class="programme-card__image">
+                <!-- IMAGE: Programme card - Primary Years Programme -->
+                <img src="images/primary-school-cards.jpg" alt="Primary school students" loading="lazy" />
+              </div>
+              <div class="programme-card__body">
+                <h3>Primary Years Programme (PYP)</h3>
+                <p>
+                  Inquiry-led learning that builds curiosity, confidence, and
+                  social-emotional development for ages 5-12.
+                </p>
+              </div>
+            </article>
+            <article class="programme-card">
+              <div class="programme-card__image">
+                <!-- IMAGE: Programme card - Secondary & Pre-IB -->
+                <img src="images/steam-0.jpg" alt="Secondary school STEAM" loading="lazy" />
+              </div>
+              <div class="programme-card__body">
+                <h3>Secondary &amp; Pre-IB</h3>
+                <p>
+                  A bespoke secondary pathway grounded in IB philosophy, with Pre-IB
+                  in grades 9-10 and a strong STEM focus.
+                </p>
+              </div>
+            </article>
+            <article class="programme-card">
+              <div class="programme-card__image">
+                <!-- IMAGE: Programme card - Diploma Programme -->
+                <img src="images/diploma-graduation-.jpg" alt="Diploma Programme graduation" loading="lazy" />
+              </div>
+              <div class="programme-card__body">
+                <h3>Diploma Programme (DP)</h3>
+                <p>
+                  A rigorous two-year programme for ages 16-19, preparing students
+                  for university and beyond.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- IB Results Highlight -->
+      <section class="section section--navy">
+        <div class="container">
+          <div class="highlight-banner">
+            <div class="highlight-text">
+              <h2>Outstanding IB Results</h2>
+              <p>
+                ISSH students consistently achieve excellent IB Diploma results,
+                with a 100% pass rate for several consecutive years and outcomes
+                well above the world average.
+              </p>
+              <!-- <a href="#" class="btn btn--accent">IB diploma results</a> -->
+            </div>
+            <div class="highlight-stats">
+              <div class="stat-circle">
+                <span class="stat-value">100%</span>
+                <span class="stat-label">Pass rate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Boarding Programme -->
+      <section id="boarding" class="section">
+        <div class="container">
+          <div class="split-layout split-layout--reverse">
+            <div class="split-image">
+              <!-- IMAGE: Boarding programme split image -->
+              <img
+                src="images/boarding-programme-student-life.jpg"
+                alt="Boarding programme student life"
+                loading="lazy"
+              />
+            </div>
+            <div class="split-content">
+              <p class="section-label">Boarding Programme</p>
+              <h2>Neighbourhood-style boarding</h2>
+              <p>
+                ISSH boarding goes beyond accommodation. It is a safe, nurturing
+                environment designed to build independence, responsibility, and life
+                skills in a neighbourhood setting off campus.
+              </p>
+              <ul class="feature-list">
+                <li>Independence and real-world responsibility</li>
+                <li>Small groups of around 10 students</li>
+                <li>Daily cultural exchange in a global community</li>
+                <li>Woven into the educational concept</li>
+              </ul>
+              <!-- <a href="#" class="btn btn--teal">Boarding details</a> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Holiday Camps -->
+      <section id="camps" class="section section--beige">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-label">Holiday Camps</p>
+            <h2>Discover our holiday camps</h2>
+            <p class="section-desc">
+              Exciting, enriching camps for children and young people during the school holidays.
+            </p>
+          </div>
+          <div class="camps-grid">
+            <div class="camp-card">
+              <h3>Adventure Camp</h3>
+              <p>Outdoor activities, team challenges, and fun in the beautiful Schaffhausen region.</p>
+            </div>
+            <div class="camp-card">
+              <h3>STEAM Camp</h3>
+              <p>Hands-on science, technology, engineering, arts, and maths experiences.</p>
+            </div>
+            <div class="camp-card">
+              <h3>Holiday Programme</h3>
+              <p>A blend of creative, active, and educational activities for all ages.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Campus Gallery -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-label">Campus Life</p>
+            <h2>Campus moments</h2>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-item gallery-item--wide">
+              <!-- IMAGE: Campus gallery - Facilities -->
+              <img src="images/facilities-and-360-tour-1.jpg" alt="ISSH facilities" loading="lazy" />
+              <figcaption>Facilities</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <!-- IMAGE: Campus gallery - Library -->
+              <img src="images/library.jpg" alt="Library and study space" loading="lazy" />
+              <figcaption>Library &amp; Study</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <!-- IMAGE: Campus gallery - Nursery -->
+              <img src="images/nursery.jpg" alt="Nursery environment" loading="lazy" />
+              <figcaption>Nursery</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <!-- IMAGE: Campus gallery - IB Programme -->
+              <img src="images/ib-programme-body-image.jpg" alt="IB Programme learning" loading="lazy" />
+              <figcaption>IB Programme</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community -->
+      <section id="community" class="section section--beige">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-label">Our Community</p>
+            <h2>A global community, rooted in Schaffhausen</h2>
+            <p class="section-desc">
+              ISSH brings together international and local Swiss families, grounded in
+              shared values, mutual respect, and a strong local connection.
+            </p>
+          </div>
+          <div class="community-grid">
+            <div class="community-card">
+              <div class="community-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <h3>Personalised learning</h3>
+              <p>Every student is seen and supported; small classes and caring teachers guide each learner at every stage.</p>
+            </div>
+            <div class="community-card">
+              <div class="community-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <h3>Global outlook</h3>
+              <p>A multi-cultural environment prepares students to thrive in an interconnected world.</p>
+            </div>
+            <div class="community-card">
+              <div class="community-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h3>Dedicated mentorship</h3>
+              <p>Individual support and guidance to help each student reach their full potential.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Admissions -->
+      <section id="admissions" class="section section--navy">
+        <div class="container">
+          <div class="admissions-layout admissions-layout--centered">
+            <div class="admissions-content">
+              <p class="section-label section-label--light">Admissions</p>
+              <h2>Start your child's journey</h2>
+              <p>
+                From Early Learning through the IB Diploma, the admissions team supports
+                families at every step. Learn about entry requirements, visit options,
+                and the full admissions pathway.
+              </p>
+              <a href="enquire.html" class="btn btn--accent" style="margin-top: 30px;">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <!-- IMAGE: Footer logo -->
+            <img src="images/logo.svg" alt="ISSH" class="footer-logo" />
+            <p>
+              A non-profit private day and boarding school offering English-language
+              IB education in Schaffhausen, Switzerland.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <p>Muhlentalstrasse 280<br>8200 Schaffhausen<br>Switzerland</p>
+            <p><a href="tel:+41526241707">+41 52 624 17 07</a></p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#about">About ISSH</a></li>
+              <li><a href="#programmes">Programmes</a></li>
+              <li><a href="#boarding">Boarding</a></li>
+              <li><a href="#admissions">Admissions</a></li>
+              <li><a href="#camps">Holiday Camps</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow us</h4>
+            <div class="social-links">
+              <a href="https://www.instagram.com/isschaffhausen" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+              <a href="https://www.facebook.com/InternationalSchoolofSchaffhausen" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@internationalschoolofschaf8420" target="_blank" rel="noopener" aria-label="YouTube" class="social-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="https://ch.linkedin.com/school/international-school-of-schaffhausen" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; International School of Schaffhausen. All rights reserved.</span>
+          <div class="footer-links">
+            <a href="#">Terms &amp; Privacy</a>
+            <a href="#">Sitemap</a>
+            <a href="#">Non-discrimination policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+</div>
+
+<script>
+
+      // Hero Carousel
+      (function () {
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.dot');
+        let current = 0;
+        let interval;
+
+        function goTo(index) {
+          slides[current].classList.remove('active');
+          dots[current].classList.remove('active');
+          current = index;
+          slides[current].classList.add('active');
+          dots[current].classList.add('active');
+        }
+
+        function next() {
+          goTo((current + 1) % slides.length);
+        }
+
+        function startAutoplay() {
+          interval = setInterval(next, 5000);
+        }
+
+        dots.forEach(function (dot) {
+          dot.addEventListener('click', function () {
+            clearInterval(interval);
+            goTo(parseInt(this.dataset.slide));
+            startAutoplay();
+          });
+        });
+
+        startAutoplay();
+      })();
+
+      // Mobile Menu
+      (function () {
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const body = document.querySelector('.issh-wrap');
+
+        hamburger.addEventListener('click', function () {
+          hamburger.classList.toggle('active');
+          mobileMenu.classList.toggle('active');
+          body.classList.toggle('menu-open');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            body.classList.remove('menu-open');
+          });
+        });
+      })();
+
+      // Smooth scroll
+      document.querySelectorAll('.issh-wrap a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+          var href = this.getAttribute('href');
+          if (href === '#') return;
+          var target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Header scroll effect
+      (function () {
+        var header = document.querySelector('.site-header');
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+      })();
+
+    
+</script>
