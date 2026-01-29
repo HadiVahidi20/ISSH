@@ -1,0 +1,16 @@
+name: Netlify Deploy Hook
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "issh-landing/**"
+      - ".github/workflows/netlify-deploy.yml"
+
+jobs:
+  trigger-netlify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify build hook
+        run: curl -X POST -d '{}' "${{ secrets.NETLIFY_BUILD_HOOK_URL }}"
