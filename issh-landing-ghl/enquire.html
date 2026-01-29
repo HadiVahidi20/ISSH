@@ -102,7 +102,7 @@
   max-width: 100vw !important;
   position: relative !important;
   left: 50% !important;
-  transform: translateX(-50%) !important;
+  margin-left: -50vw !important;
   overflow-x: hidden;
 }
 
@@ -1061,42 +1061,6 @@
   font-size: 16px;
 }
 
-.contact-grid {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-card {
-  text-align: center;
-}
-
-.contact-card h3 {
-  font-size: 22px;
-  font-weight: 500;
-  color: var(--navy);
-  margin-bottom: 10px;
-}
-
-.contact-card > p {
-  font-size: 16px;
-  font-weight: 300;
-  color: var(--grey);
-  margin-bottom: 24px;
-}
-
-.contact-details p {
-  font-size: 15px;
-  color: var(--black);
-  margin-bottom: 8px;
-}
-
-.contact-details a {
-  color: var(--teal);
-}
-
-.contact-details a:hover {
-  text-decoration: underline;
-}
 
 /* ===================================================
    FOOTER
@@ -1477,9 +1441,26 @@
         <div class="container">
           <div class="enquire-form-wrapper">
             <!-- Embed your form here -->
-            <div class="form-placeholder">
-              <p>Enquiry form will be embedded here.</p>
-            </div>
+            <!-- FORM EMBED: Travel Insurance Request Form -->
+            <iframe
+              src="https://links.theherd.agency/widget/form/Wm2FvhcatVeEftu3skWJ"
+              style="width:100%;height:100%;border:none;border-radius:3px"
+              id="inline-Wm2FvhcatVeEftu3skWJ"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Travel Insurance Request Form"
+              data-height="1228"
+              data-layout-iframe-id="inline-Wm2FvhcatVeEftu3skWJ"
+              data-form-id="Wm2FvhcatVeEftu3skWJ"
+              title="Travel Insurance Request Form"
+            >
+            </iframe>
+            <script src="https://links.theherd.agency/js/form_embed.js"></script>
           </div>
         </div>
       </section>
@@ -1559,3 +1540,41 @@
       </div>
     </footer>
 </div>
+
+<script>
+
+      // Mobile Menu
+      (function () {
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const body = document.querySelector('.issh-wrap');
+
+        hamburger.addEventListener('click', function () {
+          hamburger.classList.toggle('active');
+          mobileMenu.classList.toggle('active');
+          body.classList.toggle('menu-open');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            body.classList.remove('menu-open');
+          });
+        });
+      })();
+
+      // Header scroll effect
+      (function () {
+        var header = document.querySelector('.site-header');
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+      })();
+
+
+</script>
