@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /bin/
+Disallow: /secure/
+
+Sitemap: https://www.issh.ch/sitemap.xml
