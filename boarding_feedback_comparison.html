@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ISSH Boarding Landing Page – Feedback Comparison</title>
+  <style>
+    :root {
+      --navy: #0b2a60;
+      --teal: #015f6a;
+      --beige: #f4f2ef;
+      --ink: #1a1a1a;
+      --muted: #5b6470;
+      --line: #e5e7eb;
+      --ok: #0f766e;
+      --warn: #b45309;
+      --bad: #b91c1c;
+      --bg: #faf9f7;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+    }
+
+    header {
+      background: linear-gradient(140deg, #0b2a60 0%, #015f6a 100%);
+      color: #fff;
+      padding: 32px 28px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(11, 42, 96, 0.2);
+    }
+
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    header p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .meta {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .meta span {
+      padding: 6px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .section {
+      margin-top: 32px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px 24px;
+      box-shadow: 0 10px 24px rgba(17, 24, 39, 0.04);
+    }
+
+    .section h2 {
+      margin: 0 0 14px;
+      font-size: 20px;
+      color: var(--navy);
+    }
+
+    .section h3 {
+      margin: 20px 0 8px;
+      font-size: 16px;
+      color: var(--ink);
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .summary-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+      background: #fff;
+    }
+
+    .summary-card strong { font-size: 20px; display: block; }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+    .status.done { background: rgba(15, 118, 110, 0.12); color: var(--ok); }
+    .status.partial { background: rgba(180, 83, 9, 0.12); color: var(--warn); }
+    .status.todo { background: rgba(185, 28, 28, 0.12); color: var(--bad); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th { background: #f8fafc; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .replace-block {
+      background: #f8fafc;
+      border: 1px dashed var(--line);
+      border-radius: 10px;
+      padding: 12px;
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    .replace-block strong { color: var(--navy); }
+
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      background: #eef2ff;
+      color: #4338ca;
+      margin-left: 6px;
+    }
+
+    .list {
+      padding-left: 18px;
+    }
+
+    .list li { margin: 4px 0; }
+
+    .small { font-size: 12px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>ISSH Boarding Landing Page – Feedback Comparison</h1>
+      <p>Comparison of the feedback document vs. the current boarding landing page and enquiry page.</p>
+      <div class="meta">
+        <span>Source feedback: The_Heard_Landing_Page_Feedback.docx</span>
+        <span>Current landing: issh-landing-ghl/boarding.html</span>
+        <span>Current enquiry: issh-landing-ghl/enquire.html</span>
+        <span>Date: 2026-02-02</span>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Executive Summary</h2>
+      <p>
+        The new boarding landing page is now clearly boarding-focused and no longer contains early learning/primary content.
+        However, many of the specific copy changes requested in the feedback document are not yet applied, and several
+        structural and CTA-related updates remain outstanding.
+      </p>
+      <div class="summary-grid">
+        <div class="summary-card">
+          <strong>4</strong>
+          Done
+        </div>
+        <div class="summary-card">
+          <strong>6</strong>
+          Partial
+        </div>
+        <div class="summary-card">
+          <strong>11</strong>
+          Not done
+        </div>
+      </div>
+      <p class="note">Counts are based on the list below; see each item for details and exact text replacements.</p>
+    </section>
+
+    <section class="section">
+      <h2>Detailed Comparison (Feedback Item → Current Status)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Feedback Item</th>
+            <th>Status</th>
+            <th>Current (boarding.html / enquire.html)</th>
+            <th>Required Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Boarding must be the focus (80% boarding/secondary/IBDP)</td>
+            <td><span class="status partial">Partial</span></td>
+            <td>Page is boarding-focused, but some sections are still generic (student life, wellbeing, general CTA copy).</td>
+            <td>Increase explicit boarding + IBDP emphasis in copy blocks and CTAs.</td>
+          </tr>
+          <tr>
+            <td>Boarding content should appear before unrelated sections</td>
+            <td><span class="status done">Done</span></td>
+            <td>Boarding hero → Programme → Boarding life content first.</td>
+            <td>No change needed.</td>
+          </tr>
+          <tr>
+            <td>Top-right Enquire should go directly to inquiry page</td>
+            <td><span class="status todo">Not done</span></td>
+            <td>Header Enquire links to <code>#admissions</code>.</td>
+            <td>Replace header and hero Enquire links with enquiry page URL.</td>
+          </tr>
+          <tr>
+            <td>Footer links (Terms/Privacy, Sitemap, Non-discrimination) must go somewhere real</td>
+            <td><span class="status todo">Not done</span></td>
+            <td>Footer links use <code>#</code> placeholders.</td>
+            <td>Replace with correct policy URLs or remove.</td>
+          </tr>
+          <tr>
+            <td>Mobile hero text obscures subjects</td>
+            <td><span class="status partial">Partial</span></td>
+            <td>Cannot confirm without visual QA; overlay appears heavy.</td>
+            <td>Test on mobile and adjust overlay or text position if needed.</td>
+          </tr>
+          <tr>
+            <td>Hero images should not include very young children</td>
+            <td><span class="status partial">Partial</span></td>
+            <td>Images are boarding-themed, but ages are unknown from URLs.</td>
+            <td>Review each hero image and replace any that show very young children.</td>
+          </tr>
+          <tr>
+            <td>Hero H2 text should match campaign goal (proposed copy)</td>
+            <td><span class="status todo">Not done</span></td>
+            <td>Current H1: “A home away from home in the heart of Switzerland”.</td>
+            <td>Replace H1/H2 with the proposed text from feedback.</td>
+          </tr>
+          <tr>
+            <td>Stats bar should show IB/IBDP boarding stats (100%, 44/45, 40 nationalities)</td>
+            <td><span class="status todo">Not done</span></td>
+            <td>Facts strip: 15+ age, 10 per house, 24/7, 100% IB pass rate.</td>
+            <td>Replace with requested stat set.</td>
+          </tr>
+          <tr>
+            <td>Add/replace “Why ISSH?” content with provided copy + bullet list</td>
+            <td><span class="status todo">Not done</span></td>
+            <td>No “Why ISSH?” section in current page.</td>
+            <td>Add a “Why ISSH?” section using the provided copy and bullets.</td>
+          </tr>
+          <tr>
+            <td>Our Programmes copy (IB philosophy paragraph)</td>
+            <td><span class="status todo">Not done</span></td>
+            <td>No “Our Programmes” content; current “Student Life” is activities-focused.</td>
+            <td>Replace student life intro with the provided programmes copy.</td>
+          </tr>
+          <tr>
+            <td>Programme tiles: remove ELC/Primary; order = Boarding, Diploma-prep, IBDP</td>
+            <td><span class="status todo">Not done</span></td>
+            <td>Current tiles = Activities, Culture, Excursions, Weekend Life.</td>
+            <td>Replace with Boarding, Diploma-prep, IBDP tiles and new copy.</td>
+          </tr>
+          <tr>
+            <td>Outstanding results section: add 3 bubbles (100% IBDP, 44/45, 33% top-100 unis)</td>
+            <td><span class="status todo">Not done</span></td>
+            <td>Only one circle (100% IB pass rate).</td>
+            <td>Add three stat bubbles and replace text.</td>
+          </tr>
+          <tr>
+            <td>Boarding programme copy (neighbourhood-style + bullet list)</td>
+            <td><span class="status todo">Not done</span></td>
+            <td>Programme copy is different; bullet list does not match feedback.</td>
+            <td>Replace with provided paragraph + bullet list.</td>
+          </tr>
+          <tr>
+            <td>Campus moments section should be relevant or replaced</td>
+            <td><span class="status partial">Partial</span></td>
+            <td>Gallery is boarding-related and has lightbox; no links or topic tiles.</td>
+            <td>Option A: remove gallery. Option B: replace with 4 tiles + links (Extracurriculars, STEM, Boarding Life, Our Community).</td>
+          </tr>
+          <tr>
+            <td>Our community block should be “Our city is your campus” with 4 sub-points</td>
+            <td><span class="status partial">Partial</span></td>
+            <td>Explore Schaffhausen section exists, but copy differs and has 3 cards.</td>
+            <td>Replace with the provided paragraph + 3 sub-heads (Small town, Discover Switzerland, Global outlook).</td>
+          </tr>
+          <tr>
+            <td>CTA section should start “Start the conversation … Enquire now”</td>
+            <td><span class="status todo">Not done</span></td>
+            <td>CTA focuses on costs, eligibility, and general admissions text.</td>
+            <td>Replace CTA copy with provided copy.</td>
+          </tr>
+          <tr>
+            <td>Inquiry page: include admissions email address</td>
+            <td><span class="status todo">Not done</span></td>
+            <td>Enquire page says “phone or email” but no email listed.</td>
+            <td>Add <code>admissions@issh.ch</code> in contact block.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Exact Text Replacements (Recommended)</h2>
+
+      <h3>Hero H1/H2</h3>
+      <div class="replace-block">
+        <strong>Current:</strong> “A home away from home in the heart of Switzerland”<br>
+        <strong>Replace with:</strong> “Rethinking boarding for ages 14-19: neighbourhood-style living, IB excellence, and global readiness in Switzerland”
+      </div>
+
+      <h3>Stats / Facts Strip</h3>
+      <div class="replace-block">
+        <strong>Current facts:</strong> 15+ minimum age, 10 students per house, 24/7 supervised care, 100% IB pass rate<br>
+        <strong>Replace with:</strong>
+        <ul class="list">
+          <li>IBDP pass rate: 100%</li>
+          <li>Top IB score: 44/45</li>
+          <li>Nationalities: 40</li>
+          <li>World school (if required by campaign messaging)</li>
+        </ul>
+        <p class="small">If “World school” is meant to be a stat label, confirm the exact wording.</p>
+      </div>
+
+      <h3>Why ISSH?</h3>
+      <div class="replace-block">
+        <strong>Add section text:</strong><br>
+        “The boarding programme at the International School of Schaffhausen is more than a place to live. It’s a place to grow. Our innovative boarding programme brings together academic excellence and real-world readiness, fostering independence, personal responsibility, and creating meaningful connections with the local community.”
+        <ul class="list">
+          <li>IB excellence with a 100% pass rate and above-global-average scores</li>
+          <li>An innovative, skills-based boarding curriculum focusing on academic excellence and personal development</li>
+          <li>A proven pathway to global top 100 universities</li>
+          <li>Individual mentoring encouraging discipline, responsibility and independence</li>
+        </ul>
+      </div>
+
+      <h3>Our Programmes (School life + academics)</h3>
+      <div class="replace-block">
+        <strong>Replace section intro with:</strong><br>
+        “Guided by the IB philosophy, our programmes encourage academic excellence while developing ownership and autonomy. A rigorous academic curriculum encourages critical thinking and a global perspective, while a skills-based boarding programme prepares students for success at university and beyond.”
+      </div>
+
+      <h3>Programme Tiles (replace student life cards)</h3>
+      <div class="replace-block">
+        <strong>Replace tiles with:</strong> Boarding → Diploma-prep → IBDP<br>
+        <span class="pill">Remove ELC/Primary</span>
+      </div>
+
+      <h3>Outstanding Results</h3>
+      <div class="replace-block">
+        <strong>Replace paragraph with:</strong><br>
+        “ISSH students consistently achieve remarkable academic results. With a 100% IBDP pass rate, and consistent above-average scores, our programme is a proven pathway to university success.”
+        <ul class="list">
+          <li>100% IBDP pass rate</li>
+          <li>44/45 top score</li>
+          <li>33% global top 100 universities</li>
+        </ul>
+      </div>
+
+      <h3>Boarding Programme (Neighbourhood-style)</h3>
+      <div class="replace-block">
+        <strong>Replace paragraph with:</strong><br>
+        “Boarding at ISSH goes beyond accommodation. Our purpose-built programme offers unparalleled individual attention, guiding students towards independence and responsibility while offering an authentic Swiss experience.”
+        <ul class="list">
+          <li>Skill development for university readiness</li>
+          <li>Individualised pastoral care develops independence and responsibility</li>
+          <li>Family-like accommodation and community integration</li>
+          <li>An international environment fosters global-mindedness</li>
+        </ul>
+      </div>
+
+      <h3>Our City Is Your Campus (Explore Schaffhausen)</h3>
+      <div class="replace-block">
+        <strong>Replace section intro with:</strong><br>
+        “Located in the north of Switzerland, Schaffhausen is a bustling, cosmopolitan community of 40,000 people. Conveniently located 40 minutes from Zurich, Schaffhausen offers all the amenities of a big city, in a charming, neighbourhood-like environment. Boarding students can explore the city on foot, make connections with local students, and gain an authentically Swiss experience.”
+        <ul class="list">
+          <li><strong>Small town, big possibilities</strong> – With a wide array of clubs, teams, festivals and events, Schaffhausen offers a rich cultural experience.</li>
+          <li><strong>Discover Switzerland</strong> – From Alpabfahrt to the Zibelemärit, boarding students discover Swiss culture and tradition.</li>
+          <li><strong>Global outlook</strong> – Cultural exchange and Swiss diplomacy prepare students for success in an interconnected world.</li>
+        </ul>
+      </div>
+
+      <h3>CTA (Admissions)</h3>
+      <div class="replace-block">
+        <strong>Replace CTA with:</strong><br>
+        “Start the conversation. Is ISSH boarding right for your family? Our admissions team is here to help you. Let’s start the conversation and see where independence leads.”
+        <br><strong>Button:</strong> Enquire now (link to enquiry page)
+      </div>
+
+      <h3>Enquiry Page Contact Block</h3>
+      <div class="replace-block">
+        <strong>Current:</strong> “If you prefer, you can also reach us by phone or email.” (no email listed)<br>
+        <strong>Add:</strong> admissions@issh.ch
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Next Actions Checklist</h2>
+      <ul class="list">
+        <li>Update all Enquire buttons to point to the enquiry page URL (not anchors).</li>
+        <li>Replace hero headline and stats strip with the requested campaign copy.</li>
+        <li>Add a “Why ISSH?” section with provided paragraph + bullet list.</li>
+        <li>Replace student life tiles with Boarding, Diploma-prep, IBDP tiles.</li>
+        <li>Update Outstanding Results section with 3 stat bubbles.</li>
+        <li>Replace Programme and Explore Schaffhausen copy with provided text.</li>
+        <li>Update CTA section copy and button label/link.</li>
+        <li>Add admissions@issh.ch to enquiry page contact block.</li>
+        <li>Replace or remove footer legal links that currently point to #.</li>
+        <li>Perform mobile QA on hero image overlay after copy changes.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
