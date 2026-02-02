@@ -1,0 +1,1880 @@
+  <!-- ================================================= -->
+  <!-- ISSH Boarding Programme - Go High Level Landing    -->
+  <!-- ================================================= -->
+  <!--                                                    -->
+  <!-- HOW TO USE IN GHL:                                 -->
+  <!-- 1. Upload all images from the "images" folder to   -->
+  <!--    GHL Media Library or an external CDN            -->
+  <!-- 2. Find & replace all image paths below:           -->
+  <!--    - src="images/..." attributes                   -->
+  <!--    - url('images/...') in inline styles           -->
+  <!--    Replace with your hosted image URLs             -->
+  <!-- 3. Update internal page links:                     -->
+  <!--    - href="enquire.html" -> your GHL enquire URL   -->
+  <!--    - href="index.html"   -> your GHL home URL     -->
+  <!--    - href="boarding.html" -> your GHL boarding URL -->
+  <!-- 4. Paste this entire code into a "Custom Code"     -->
+  <!--    (or "Code" / "HTML") element in your GHL        -->
+  <!--    funnel or website page builder                  -->
+  <!-- 5. If using GHL's own header/footer, you can      -->
+  <!--    remove the <header> and <footer> sections below -->
+  <!--                                                    -->
+  <!-- ================================================= -->
+
+  <style>
+
+  /* ===================================================
+    ISSH Boarding Programme Landing Page
+    Colors: Navy #0b2a60, Teal #015f6a, Beige #f4f2ef
+    Fonts: Stolzl (via Adobe Typekit), Arsenica Variable
+    =================================================== */
+
+  /* --- Font Face Declarations (Stolzl from Typekit) --- */
+  @font-face {
+    font-display: swap;
+    font-family: stolzl;
+    font-style: normal;
+    font-weight: 100;
+    src: url(https://use.typekit.net/af/f5ea15/00000000000000007753c396/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+        url(https://use.typekit.net/af/f5ea15/00000000000000007753c396/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: stolzl;
+    font-style: normal;
+    font-weight: 200;
+    src: url(https://use.typekit.net/af/586695/00000000000000007753c398/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+        url(https://use.typekit.net/af/586695/00000000000000007753c398/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: stolzl;
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://use.typekit.net/af/e58fc3/00000000000000007753c397/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+        url(https://use.typekit.net/af/e58fc3/00000000000000007753c397/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: stolzl;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://use.typekit.net/af/2f17eb/00000000000000007753c395/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+        url(https://use.typekit.net/af/2f17eb/00000000000000007753c395/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: stolzl;
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://use.typekit.net/af/32bb89/00000000000000007753c394/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+        url(https://use.typekit.net/af/32bb89/00000000000000007753c394/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: stolzl;
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://use.typekit.net/af/bee409/00000000000000007753c399/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+        url(https://use.typekit.net/af/bee409/00000000000000007753c399/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: arsenica-variable;
+    font-style: italic;
+    font-weight: 100 800;
+    src: url(https://use.typekit.net/af/d8f973/0000000000000000774afb61/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+        url(https://use.typekit.net/af/d8f973/0000000000000000774afb61/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: arsenica-variable;
+    font-style: normal;
+    font-weight: 100 800;
+    src: url(https://use.typekit.net/af/2f4c2a/0000000000000000774afb64/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff2"),
+        url(https://use.typekit.net/af/2f4c2a/0000000000000000774afb64/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&v=3) format("woff");
+  }
+
+  /* --- GHL Full-Width Override --- */
+  .issh-wrap {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    margin-left: -50vw !important;
+    overflow-x: hidden;
+  }
+
+  /* --- CSS Variables --- */
+  .issh-wrap {
+    --navy: #0b2a60;
+    --navy-dark: #010e4d;
+    --navy-mid: #1b375c;
+    --teal: #015f6a;
+    --teal-light: #017a87;
+    --beige: #f4f2ef;
+    --white: #ffffff;
+    --black: #1a1a1a;
+    --grey: #6b7280;
+    --grey-light: #9ca3af;
+    --accent-yellow: #edf869;
+    --purple-grey: #c2c0d9;
+    --line: rgba(27, 55, 92, 0.12);
+    --font-primary: stolzl, sans-serif;
+    --font-secondary: arsenica-variable, Georgia, serif;
+    --container-max: 1340px;
+    --header-height: 80px;
+  }
+
+  /* --- Reset & Base --- */
+  .issh-wrap,
+  .issh-wrap *,
+  .issh-wrap *::before,
+  .issh-wrap *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .issh-wrap {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .issh-wrap {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--black);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  .issh-wrap.menu-open {
+    overflow: hidden;
+  }
+
+  .issh-wrap a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .issh-wrap img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .issh-wrap ul {
+    list-style: none;
+  }
+
+  .issh-wrap h1, .issh-wrap h2, .issh-wrap h3, .issh-wrap h4 {
+    font-weight: 500;
+    line-height: 1.25;
+  }
+
+  .container {
+    width: min(100% - 60px, var(--container-max));
+    margin: 0 auto;
+  }
+
+  /* ===================================================
+    HEADER
+    =================================================== */
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid transparent;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+    height: var(--header-height);
+  }
+
+  .site-header.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom-color: var(--line);
+    box-shadow: 0 2px 20px rgba(11, 42, 96, 0.06);
+  }
+
+  .header-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .header-logo {
+    flex-shrink: 0;
+  }
+
+  .header-logo img {
+    height: 50px;
+    width: auto;
+  }
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .main-nav a {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--navy-dark);
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+  }
+
+  .main-nav a:hover {
+    background: var(--beige);
+    color: var(--teal);
+  }
+
+  .header-ctas {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .header-btn {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 9px 20px;
+    border-radius: 6px;
+    transition: all 0.25s;
+    white-space: nowrap;
+  }
+
+  .header-btn--outline {
+    color: var(--navy);
+    border: 1.5px solid var(--navy);
+  }
+
+  .header-btn--outline:hover {
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .header-btn--filled {
+    background: var(--teal);
+    color: var(--white);
+    border: 1.5px solid var(--teal);
+  }
+
+  .header-btn--filled:hover {
+    background: var(--teal-light);
+    border-color: var(--teal-light);
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 110;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--navy);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s, visibility 0.35s;
+  }
+
+  .mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .mobile-nav a {
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--navy);
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .mobile-nav a:hover {
+    background: var(--beige);
+    color: var(--teal);
+  }
+
+  .mobile-ctas {
+    display: flex;
+    gap: 12px;
+  }
+
+  .mobile-ctas .header-btn {
+    font-size: 16px;
+    padding: 12px 28px;
+  }
+
+  /* ===================================================
+    HERO
+    =================================================== */
+  .hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    max-height: 800px;
+    margin-top: var(--header-height);
+    overflow: hidden;
+  }
+
+  .hero-carousel {
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+  }
+
+  .hero-slide.active {
+    opacity: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(1, 14, 77, 0.75) 0%,
+      rgba(11, 42, 96, 0.5) 40%,
+      rgba(11, 42, 96, 0.2) 100%
+    );
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(100% - 60px, var(--container-max));
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-content .hero-eyebrow,
+  .hero-content h1,
+  .hero-content .hero-lead,
+  .hero-content .hero-buttons {
+    max-width: 650px;
+  }
+
+  .hero-eyebrow {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-yellow);
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 4vw + 10px, 52px);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+
+  .hero-lead {
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .hero-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    gap: 10px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0;
+  }
+
+  .dot.active {
+    background: var(--white);
+    border-color: var(--white);
+  }
+
+  .dot:hover {
+    border-color: var(--white);
+  }
+
+  /* ===================================================
+    BUTTONS
+    =================================================== */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 30px;
+    border-radius: 6px;
+    font-family: var(--font-primary);
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-align: center;
+  }
+
+  .btn--primary {
+    background: var(--teal);
+    color: var(--white);
+  }
+
+  .btn--primary:hover {
+    background: var(--teal-light);
+  }
+
+  .btn--secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+  }
+
+  .btn--secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: var(--white);
+  }
+
+  .btn--teal {
+    background: var(--teal);
+    color: var(--white);
+  }
+
+  .btn--teal:hover {
+    background: var(--teal-light);
+  }
+
+  .btn--accent {
+    background: var(--accent-yellow);
+    color: var(--navy);
+    font-weight: 500;
+  }
+
+  .btn--accent:hover {
+    background: #e0eb5c;
+  }
+
+  /* ===================================================
+    FACTS STRIP
+    =================================================== */
+  .facts-strip {
+    background: var(--navy);
+    padding: 40px 0;
+  }
+
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+  }
+
+  .fact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .fact-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent-yellow);
+    line-height: 1;
+  }
+
+  .fact-text {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* ===================================================
+    SECTIONS
+    =================================================== */
+  .section {
+    padding: 100px 0;
+  }
+
+  .section--beige {
+    background: var(--beige);
+  }
+
+  .section--navy {
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .section--navy h2 {
+    color: var(--white);
+  }
+
+  .section--navy p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .section-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 10px;
+  }
+
+  .section-label--light {
+    color: var(--accent-yellow);
+  }
+
+  .section-header {
+    max-width: 700px;
+    margin-bottom: 50px;
+  }
+
+  .section-header--center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-header h2 {
+    font-size: clamp(28px, 3vw + 5px, 36px);
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+
+  .section--navy .section-header h2 {
+    color: var(--white);
+  }
+
+  .section-desc {
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--grey);
+    line-height: 1.7;
+  }
+
+  .section--navy .section-desc {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  /* ===================================================
+    SPLIT LAYOUT
+    =================================================== */
+  .split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .split-layout--reverse .split-image {
+    order: 2;
+  }
+
+  .split-layout--reverse .split-content {
+    order: 1;
+  }
+
+  .split-image img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .split-content h2 {
+    font-size: clamp(26px, 3vw, 34px);
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+
+  .split-content > p {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--grey);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .feature-list {
+    margin-bottom: 30px;
+  }
+
+  .feature-list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--black);
+  }
+
+  .feature-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--teal);
+  }
+
+  /* ===================================================
+    CARDS
+    =================================================== */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .programme-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(11, 42, 96, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .programme-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(11, 42, 96, 0.12);
+  }
+
+  .programme-card__image {
+    overflow: hidden;
+    height: 220px;
+  }
+
+  .programme-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+
+  .programme-card:hover .programme-card__image img {
+    transform: scale(1.05);
+  }
+
+  .programme-card__body {
+    padding: 24px;
+  }
+
+  .programme-card__body h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .programme-card__body p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--grey);
+    line-height: 1.6;
+  }
+
+  /* ===================================================
+    HIGHLIGHT BANNER
+    =================================================== */
+  .highlight-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .highlight-text {
+    max-width: 600px;
+  }
+
+  .highlight-text h2 {
+    font-size: clamp(28px, 3vw, 36px);
+    margin-bottom: 16px;
+  }
+
+  .highlight-text p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+
+  .stat-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .stat-value {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--accent-yellow);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 4px;
+  }
+
+  /* ===================================================
+    ICON CARDS (3-column)
+    =================================================== */
+  .icon-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .icon-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 36px 30px;
+    box-shadow: 0 4px 24px rgba(11, 42, 96, 0.06);
+    border-top: 4px solid var(--teal);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .icon-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(11, 42, 96, 0.12);
+  }
+
+  .icon-card__icon {
+    width: 48px;
+    height: 48px;
+    color: var(--teal);
+    margin-bottom: 20px;
+  }
+
+  .icon-card__icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .icon-card h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+
+  .icon-card p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--grey);
+    line-height: 1.6;
+  }
+
+  /* ===================================================
+    GALLERY
+    =================================================== */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .gallery-item {
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .gallery-item--wide {
+    grid-column: span 2;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .gallery-item figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 20px;
+    background: linear-gradient(to top, rgba(1, 14, 77, 0.7), transparent);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  /* ===================================================
+    ADMISSIONS CTA
+    =================================================== */
+  .admissions-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .admissions-layout--centered {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .admissions-content h2 {
+    font-size: clamp(28px, 3vw, 36px);
+    margin-bottom: 16px;
+  }
+
+  .admissions-content p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  /* ===================================================
+    DAILY SCHEDULE
+    =================================================== */
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .schedule-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 30px 24px;
+    transition: background 0.25s, border-color 0.25s;
+  }
+
+  .schedule-card:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .schedule-card__time {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent-yellow);
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .schedule-card h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .schedule-card p {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+  }
+
+  /* ===================================================
+    FOOTER
+    =================================================== */
+  .site-footer {
+    background: var(--navy-dark);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 60px 0 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .footer-logo {
+    height: 45px;
+    width: auto;
+    margin-bottom: 16px;
+    filter: brightness(0) invert(1);
+  }
+
+  .footer-brand p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7;
+    max-width: 320px;
+  }
+
+  .footer-col h4 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .footer-col p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-col a {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover {
+    color: var(--accent-yellow);
+  }
+
+  .social-links {
+    display: flex;
+    gap: 12px;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    transition: background 0.25s, color 0.25s;
+  }
+
+  .social-link:hover {
+    background: var(--teal);
+    color: var(--white);
+  }
+
+  .social-link svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  /* ===================================================
+    RESPONSIVE
+    =================================================== */
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .main-nav {
+      display: none;
+    }
+
+    .header-ctas {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .split-layout {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .split-layout--reverse .split-image {
+      order: 0;
+    }
+
+    .split-layout--reverse .split-content {
+      order: 0;
+    }
+
+    .cards-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item--wide {
+      grid-column: span 2;
+    }
+
+    .admissions-layout {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .highlight-banner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .schedule-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .icon-cards-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-content {
+      text-align: center;
+      align-items: center;
+    }
+
+    .hero-content .hero-eyebrow,
+    .hero-content h1,
+    .hero-content .hero-lead,
+    .hero-content .hero-buttons {
+      max-width: 100%;
+    }
+
+    .hero-buttons {
+      justify-content: center;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .issh-wrap {
+      --header-height: 64px;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--container-max));
+    }
+
+    .header-inner {
+      padding: 0 20px;
+    }
+
+    .header-logo img {
+      height: 38px;
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .hero {
+      height: 75vh;
+      min-height: 420px;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+    }
+
+    .hero-lead {
+      font-size: 15px;
+    }
+
+    .facts-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .fact-number {
+      font-size: 26px;
+    }
+
+    .cards-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .icon-cards-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .schedule-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .gallery-item--wide {
+      grid-column: span 1;
+    }
+
+    .split-image img {
+      height: 300px;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .section-header {
+      margin-bottom: 36px;
+    }
+
+    .section-header h2 {
+      font-size: 26px;
+    }
+
+    .stat-circle {
+      width: 140px;
+      height: 140px;
+    }
+
+    .stat-value {
+      font-size: 32px;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-slide {
+      transition: none;
+    }
+
+    .programme-card,
+    .icon-card,
+    .schedule-card {
+      transition: none;
+    }
+
+    .programme-card:hover,
+    .icon-card:hover {
+      transform: none;
+    }
+
+    .programme-card:hover .programme-card__image img,
+    .gallery-item:hover img {
+      transform: none;
+    }
+
+    .issh-wrap {
+      scroll-behavior: auto;
+    }
+  }
+
+  </style>
+
+  <div class="issh-wrap">
+  <!-- Header -->
+      <header class="site-header">
+        <div class="header-inner">
+          <a href="index.html" class="header-logo">
+            <!-- IMAGE: Header logo -->
+            <img src="https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e0b3ae83f484aa2d13.svg" alt="International School of Schaffhausen" />
+          </a>
+
+          <nav class="main-nav" id="mainNav">
+            <a href="#programme">The Programme</a>
+            <a href="#student-life">Student Life</a>
+            <a href="#wellbeing">Wellbeing</a>
+            <a href="#daily-life">A Day at ISSH</a>
+            <a href="#explore">Explore Schaffhausen</a>
+            <a href="#admissions">Admissions</a>
+          </nav>
+
+          <div class="header-ctas">
+            <a href="index.html" class="header-btn header-btn--outline">Home</a>
+            <a href="#admissions" class="header-btn header-btn--filled">Enquire</a>
+          </div>
+
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Mobile Menu Overlay -->
+      <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+          <a href="#programme">The Programme</a>
+          <a href="#student-life">Student Life</a>
+          <a href="#wellbeing">Wellbeing</a>
+          <a href="#daily-life">A Day at ISSH</a>
+          <a href="#explore">Explore Schaffhausen</a>
+          <a href="#admissions">Admissions</a>
+        </nav>
+        <div class="mobile-ctas">
+          <a href="index.html" class="header-btn header-btn--outline">Home</a>
+          <a href="#admissions" class="header-btn header-btn--filled">Enquire</a>
+        </div>
+      </div>
+
+      <main>
+        <!-- Hero Carousel -->
+        <section class="hero">
+          <div class="hero-carousel" id="heroCarousel">
+            <!-- IMAGE: Hero slide 1 - Boarding life -->
+            <div class="hero-slide active" style="background-image: url('https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e0e98b480724383e81.jpg')"></div>
+            <!-- IMAGE: Hero slide 2 - Students together -->
+            <div class="hero-slide" style="background-image: url('https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e0a74ce67c2491f957.jpg')"></div>
+            <!-- IMAGE: Hero slide 3 - Campus life -->
+            <div class="hero-slide" style="background-image: url('https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e0d5b65e713aaa7efe.jpg')"></div>
+            <!-- IMAGE: Hero slide 4 - Activities -->
+            <div class="hero-slide" style="background-image: url('https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e01fd82763759be7d6.jpg')"></div>
+          </div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <p class="hero-eyebrow">Boarding Programme &middot; Schaffhausen, Switzerland</p>
+            <h1>A home away from home in the heart of Switzerland</h1>
+            <p class="hero-lead">
+              Neighbourhood-style boarding that builds independence, responsibility, and lifelong friendships in one of Europe's safest countries.
+            </p>
+            <div class="hero-buttons">
+              <a href="#admissions" class="btn btn--primary">Enquire now</a>
+              <a href="#programme" class="btn btn--secondary">Discover boarding</a>
+            </div>
+          </div>
+          <div class="hero-dots" id="heroDots">
+            <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+            <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+            <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+            <button class="dot" data-slide="3" aria-label="Slide 4"></button>
+          </div>
+        </section>
+
+        <!-- Key Facts Strip -->
+        <section class="facts-strip">
+          <div class="container">
+            <div class="facts-grid">
+              <div class="fact-item">
+                <span class="fact-number">15+</span>
+                <span class="fact-text">Minimum age</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-number">10</span>
+                <span class="fact-text">Max students per house</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-number">24/7</span>
+                <span class="fact-text">Supervised care</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-number">100%</span>
+                <span class="fact-text">IB Diploma pass rate</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- The Programme -->
+        <section id="programme" class="section">
+          <div class="container">
+            <div class="split-layout">
+              <div class="split-image">
+                <!-- IMAGE: Boarding house / neighbourhood -->
+                <img
+                  src="https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e0e98b480724383e81.jpg"
+                  alt="ISSH neighbourhood-style boarding house"
+                  loading="lazy"
+                />
+              </div>
+              <div class="split-content">
+                <p class="section-label">The Programme</p>
+                <h2>Unlike any other boarding in Switzerland</h2>
+                <p>
+                  Rather than traditional dormitories, ISSH offers a neighbourhood-style, off-campus
+                  living experience in a safe, residential area just minutes from school. Each house
+                  accommodates a maximum of ten students, creating a homely environment where young
+                  people from around the world live and learn together.
+                </p>
+                <ul class="feature-list">
+                  <li>Off-campus neighbourhood houses, not dormitories</li>
+                  <li>Small groups of maximum 10 students per house</li>
+                  <li>Co-ed houses with separate boys and girls floors</li>
+                  <li>Fully equipped kitchens, lounges, and study areas</li>
+                  <li>Centrally located, 10 minutes from campus</li>
+                </ul>
+                <a href="#admissions" class="btn btn--teal">Apply for boarding</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Student Life -->
+        <section id="student-life" class="section section--beige">
+          <div class="container">
+            <div class="section-header">
+              <p class="section-label">Student Life</p>
+              <h2>Life beyond the classroom</h2>
+              <p class="section-desc">
+                A day in the life of an ISSH boarding student offers the perfect balance between
+                structure and independence. The city itself becomes part of the learning experience.
+              </p>
+            </div>
+            <div class="cards-grid">
+              <article class="programme-card">
+                <div class="programme-card__image">
+                  <!-- IMAGE: Activities -->
+                  <img src="https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e04d56837c83b22944.jpg" alt="Students enjoying activities" loading="lazy" />
+                </div>
+                <div class="programme-card__body">
+                  <h3>Activities &amp; Sports</h3>
+                  <p>
+                    Join local football teams, handball clubs, martial arts studios, or archery
+                    clubs. Schaffhausen offers the diversity of a large city with the safety
+                    of a small Swiss town.
+                  </p>
+                </div>
+              </article>
+              <article class="programme-card">
+                <div class="programme-card__image">
+                  <!-- IMAGE: Cultural experiences -->
+                  <img src="https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e0d5b65e20f0aa7f00.jpg" alt="Cultural experiences in Schaffhausen" loading="lazy" />
+                </div>
+                <div class="programme-card__body">
+                  <h3>Culture &amp; Creativity</h3>
+                  <p>
+                    Take painting classes with Swiss artists, dive into regional culture through
+                    festivals and community events, or explore the historic Old Town and Rhine Falls.
+                  </p>
+                </div>
+              </article>
+              <article class="programme-card">
+                <div class="programme-card__image">
+                  <!-- IMAGE: Excursions -->
+                  <img src="https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e04d5683c575b22943.jpg" alt="Student excursions and trips" loading="lazy" />
+                </div>
+                <div class="programme-card__body">
+                  <h3>Excursions &amp; Trips</h3>
+                  <p>
+                    Visit CERN and the United Nations in Geneva, explore the Alps, enjoy water sports
+                    on the Rhine, or take weekend trips to Paris, Berlin, and Rome.
+                  </p>
+                </div>
+              </article>
+              <article class="programme-card">
+                <div class="programme-card__image">
+                  <!-- IMAGE: Weekend life -->
+                  <img src="https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e0e98b48b76e383e93.jpg" alt="Weekend boarding life" loading="lazy" />
+                </div>
+                <div class="programme-card__body">
+                  <h3>Weekend Life</h3>
+                  <p>
+                    Weekends balance rest and adventure. Students organise activities, explore
+                    Swiss culture, visit Zurich or Basel, and develop independence within clearly
+                    defined boundaries.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Highlight Banner - IB Results -->
+        <section class="section section--navy">
+          <div class="container">
+            <div class="highlight-banner">
+              <div class="highlight-text">
+                <h2>Outstanding academic results</h2>
+                <p>
+                  ISSH boarders graduate not only with a globally recognised IB Diploma but
+                  also with the confidence, resilience, and life skills required to succeed at
+                  university and beyond. Students can also earn the US-accredited Middle States
+                  Association (MSA) High School Diploma, opening doors to universities worldwide.
+                </p>
+                <a href="#admissions" class="btn btn--accent">Start your journey</a>
+              </div>
+              <div class="highlight-stats">
+                <div class="stat-circle">
+                  <span class="stat-value">100%</span>
+                  <span class="stat-label">IB pass rate</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Wellbeing & Safety -->
+        <section id="wellbeing" class="section">
+          <div class="container">
+            <div class="split-layout split-layout--reverse">
+              <div class="split-image">
+                <!-- IMAGE: Wellbeing / safe environment -->
+                <img
+                  src="https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e0e98b485446383e8c.jpg"
+                  alt="Safe and nurturing boarding environment"
+                  loading="lazy"
+                />
+              </div>
+              <div class="split-content">
+                <p class="section-label">Wellbeing &amp; Safety</p>
+                <h2>Where every student is seen and supported</h2>
+                <p>
+                  ISSH takes a holistic approach to students' growth, considering academic,
+                  physical, social, and emotional wellbeing. Switzerland consistently ranks among
+                  the world's top ten countries for safety, and Schaffhausen's close-knit community
+                  of 40,000 residents creates an additional layer of natural security.
+                </p>
+                <ul class="feature-list">
+                  <li>Qualified care professionals: healthcare, nutrition, pedagogy</li>
+                  <li>Continuous supervision after school, overnight, and mornings</li>
+                  <li>Houses in tranquil, family-oriented residential neighbourhoods</li>
+                  <li>Proactive digital safety and media literacy guidance</li>
+                  <li>Regular wellbeing discussions and stress-management support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- A Day in the Life -->
+        <section id="daily-life" class="section section--navy">
+          <div class="container">
+            <div class="section-header section-header--center">
+              <p class="section-label section-label--light">A Day at ISSH Boarding</p>
+              <h2>Structure meets independence</h2>
+              <p class="section-desc" style="color: rgba(255,255,255,0.75);">
+                Daily routines provide the framework students need to thrive academically while
+                fostering confidence and responsibility. No two students share the exact same
+                schedule &mdash; everyone enjoys freedom to structure their free time.
+              </p>
+            </div>
+            <div class="schedule-grid">
+              <div class="schedule-card">
+                <span class="schedule-card__time">Morning</span>
+                <h3>Rise &amp; prepare</h3>
+                <p>
+                  Students wake, have breakfast, and prepare for the school day. The boarding
+                  team ensures everyone is ready and on time for classes.
+                </p>
+              </div>
+              <div class="schedule-card">
+                <span class="schedule-card__time">School day</span>
+                <h3>Academic programme</h3>
+                <p>
+                  A full day of IB learning with small class sizes, dedicated teachers, and
+                  personalised attention at the ISSH campus.
+                </p>
+              </div>
+              <div class="schedule-card">
+                <span class="schedule-card__time">Afternoon</span>
+                <h3>Activities &amp; study</h3>
+                <p>
+                  Free time for sports, clubs, local activities, or supervised study. Students
+                  can explore Schaffhausen or relax at the boarding house.
+                </p>
+              </div>
+              <div class="schedule-card">
+                <span class="schedule-card__time">Evening</span>
+                <h3>Community time</h3>
+                <p>
+                  Shared dinner, socialising, personal time, and preparation for the next day.
+                  Caregivers stay overnight for continuous support.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Explore Schaffhausen -->
+        <section id="explore" class="section section--beige">
+          <div class="container">
+            <div class="section-header">
+              <p class="section-label">Explore Schaffhausen</p>
+              <h2>The city is your campus</h2>
+              <p class="section-desc">
+                Boarding students experience authentic Swiss life in one of the country's most
+                charming cities, forming meaningful connections with the local community.
+              </p>
+            </div>
+            <div class="icon-cards-grid">
+              <div class="icon-card">
+                <div class="icon-card__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <h3>Community integration</h3>
+                <p>Join local clubs, volunteer in the community, and build friendships with Swiss residents. Boarding students become part of Schaffhausen's fabric.</p>
+              </div>
+              <div class="icon-card">
+                <div class="icon-card__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <h3>Natural beauty</h3>
+                <p>Discover the Rhine Falls, hike local trails, and explore the Black Forest. Weekend adventures bring Europe's most stunning landscapes within reach.</p>
+              </div>
+              <div class="icon-card">
+                <div class="icon-card__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3>Language &amp; culture</h3>
+                <p>Practise German in real-world settings, attend local festivals, and immerse yourself in Swiss culture while studying in an English-language IB environment.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="section">
+          <div class="container">
+            <div class="section-header">
+              <p class="section-label">Boarding Life</p>
+              <h2>Moments from our boarding community</h2>
+            </div>
+            <div class="gallery-grid">
+              <figure class="gallery-item gallery-item--wide">
+                <!-- IMAGE: Boarding house / living space -->
+                <img src="https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e0b3ae834433aa2d12.jpg" alt="ISSH boarding house living" loading="lazy" />
+                <figcaption>Neighbourhood living</figcaption>
+              </figure>
+              <figure class="gallery-item">
+                <!-- IMAGE: Students studying -->
+                <img src="https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e0a74ce6675891f956.jpg" alt="Students studying together" loading="lazy" />
+                <figcaption>Study &amp; collaboration</figcaption>
+              </figure>
+              <figure class="gallery-item">
+                <!-- IMAGE: Activities / outdoor -->
+                <img src="https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e0d5b65e83b0aa7eff.jpg" alt="Outdoor activities" loading="lazy" />
+                <figcaption>Activities &amp; adventure</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <!-- Independence & Life Skills -->
+        <section class="section section--beige">
+          <div class="container">
+            <div class="split-layout">
+              <div class="split-image">
+                <!-- IMAGE: Independent students -->
+                <img
+                  src="https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e04d568364b4b2292f.jpg"
+                  alt="Students developing independence and life skills"
+                  loading="lazy"
+                />
+              </div>
+              <div class="split-content">
+                <p class="section-label">Independence &amp; Growth</p>
+                <h2>Skills for university and life</h2>
+                <p>
+                  The ISSH boarding programme is designed around a structured yet flexible
+                  framework that allows students to naturally develop personal responsibility
+                  through real-life experience rather than strict regulations.
+                </p>
+                <ul class="feature-list">
+                  <li>Cooking, budgeting, and household management</li>
+                  <li>Communication, problem-solving, and self-advocacy</li>
+                  <li>Weekly house meetings with team-building activities</li>
+                  <li>Community service and weekend activity planning</li>
+                  <li>Preparation for independent university life</li>
+                </ul>
+                <a href="#admissions" class="btn btn--teal">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Admissions CTA -->
+        <section id="admissions" class="section section--navy">
+          <div class="container">
+            <div class="admissions-layout admissions-layout--centered">
+              <div class="admissions-content">
+                <p class="section-label section-label--light">Admissions</p>
+                <h2>Begin your boarding journey</h2>
+                <p>
+                  The ISSH Boarding Programme is open to students from age 15. Most costs are
+                  covered by school fees, including tuition, learning materials, care and supervision,
+                  all meals, and excursions. Our admissions team supports families at every step.
+                </p>
+                <a href="enquire.html" class="btn btn--accent" style="margin-top: 30px;">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer id="contact" class="site-footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <!-- IMAGE: Footer logo -->
+              <img src="https://storage.googleapis.com/msgsndr/IM0mk8Cl2cpSuEAHpkL4/media/697b87e0b3ae83f484aa2d13.svg" alt="ISSH" class="footer-logo" />
+              <p>
+                A non-profit private day and boarding school offering English-language
+                IB education in Schaffhausen, Switzerland.
+              </p>
+            </div>
+            <div class="footer-col">
+              <h4>Contact</h4>
+              <p>Muhlentalstrasse 280<br>8200 Schaffhausen<br>Switzerland</p>
+              <p><a href="tel:+41526241707">+41 52 624 17 07</a></p>
+            </div>
+            <div class="footer-col">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#programme">Boarding Programme</a></li>
+                <li><a href="#student-life">Student Life</a></li>
+                <li><a href="#wellbeing">Wellbeing</a></li>
+                <li><a href="enquire.html">Enquire</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Follow us</h4>
+              <div class="social-links">
+                <a href="https://www.instagram.com/isschaffhausen" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/InternationalSchoolofSchaffhausen" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@internationalschoolofschaf8420" target="_blank" rel="noopener" aria-label="YouTube" class="social-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+                <a href="https://ch.linkedin.com/school/international-school-of-schaffhausen" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <span>&copy; International School of Schaffhausen. All rights reserved.</span>
+            <div class="footer-links">
+              <a href="#">Terms &amp; Privacy</a>
+              <a href="#">Sitemap</a>
+              <a href="#">Non-discrimination policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </div>
+
+  <script>
+
+        // Hero Carousel
+        (function () {
+          const slides = document.querySelectorAll('.hero-slide');
+          const dots = document.querySelectorAll('.dot');
+          let current = 0;
+          let interval;
+
+          function goTo(index) {
+            slides[current].classList.remove('active');
+            dots[current].classList.remove('active');
+            current = index;
+            slides[current].classList.add('active');
+            dots[current].classList.add('active');
+          }
+
+          function next() {
+            goTo((current + 1) % slides.length);
+          }
+
+          function startAutoplay() {
+            interval = setInterval(next, 5000);
+          }
+
+          dots.forEach(function (dot) {
+            dot.addEventListener('click', function () {
+              clearInterval(interval);
+              goTo(parseInt(this.dataset.slide));
+              startAutoplay();
+            });
+          });
+
+          startAutoplay();
+        })();
+
+        // Mobile Menu
+        (function () {
+          const hamburger = document.getElementById('hamburger');
+          const mobileMenu = document.getElementById('mobileMenu');
+          const body = document.querySelector('.issh-wrap');
+
+          hamburger.addEventListener('click', function () {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            body.classList.toggle('menu-open');
+          });
+
+          mobileMenu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+              hamburger.classList.remove('active');
+              mobileMenu.classList.remove('active');
+              body.classList.remove('menu-open');
+            });
+          });
+        })();
+
+        // Smooth scroll
+        document.querySelectorAll('.issh-wrap a[href^="#"]').forEach(function (anchor) {
+          anchor.addEventListener('click', function (e) {
+            var href = this.getAttribute('href');
+            if (href === '#') return;
+            var target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        });
+
+        // Header scroll effect
+        (function () {
+          var header = document.querySelector('.site-header');
+          window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) {
+              header.classList.add('scrolled');
+            } else {
+              header.classList.remove('scrolled');
+            }
+          });
+        })();
+
+
+  </script>
