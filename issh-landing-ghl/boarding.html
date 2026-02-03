@@ -21,6 +21,11 @@
   <!--                                                    -->
   <!-- ================================================= -->
 
+  <!-- META (place in page <head> in GHL settings) -->
+  <title>ISSH Boarding Programme | International School of Schaffhausen</title>
+  <meta name="description" content="Rethinking boarding for ages 14-19 in Schaffhausen, Switzerland. Neighbourhood-style living, IB excellence, holistic wellbeing, and global readiness at ISSH.">
+  <meta name="keywords" content=" ">
+
   <style>
 
   /* ===================================================
@@ -427,11 +432,15 @@
     justify-content: center;
   }
 
+  .hero-text-wrapper {
+    max-width: 650px;
+  }
+
   .hero-content .hero-eyebrow,
   .hero-content h1,
   .hero-content .hero-lead,
   .hero-content .hero-buttons {
-    max-width: 650px;
+    max-width: 100%;
   }
 
   .hero-eyebrow {
@@ -684,7 +693,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    align-items: center;
+    align-items: start;
+  }
+
+  .split-image {
+    position: sticky;
+    top: calc(var(--header-height) + 20px);
+    align-self: start;
   }
 
   .split-layout--reverse .split-image {
@@ -868,6 +883,8 @@
     font-weight: 400;
     color: rgba(255, 255, 255, 0.9);
     margin-top: 4px;
+    align-content: center;
+    text-align: center;
   }
 
   /* ===================================================
@@ -1176,10 +1193,16 @@
     .split-layout {
       grid-template-columns: 1fr;
       gap: 40px;
+      align-items: flex-start;
+    }
+
+    .split-image {
+      position: static;
     }
 
     .split-layout--reverse .split-image {
       order: 0;
+
     }
 
     .split-layout--reverse .split-content {
@@ -1221,9 +1244,32 @@
       grid-template-columns: 1fr 1fr;
     }
 
+    .hero {
+      height: 100dvh;
+      min-height: unset;
+      max-height: unset;
+    }
+
     .hero-content {
       text-align: center;
       align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 80px;
+    }
+
+    .hero-dots {
+      bottom: 20px;
+    }
+
+    .hero-content .hero-text-wrapper {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      max-width: 100%;
+      box-sizing: border-box;
     }
 
     .hero-content .hero-eyebrow,
@@ -1234,7 +1280,13 @@
     }
 
     .hero-buttons {
-      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .hero-buttons .btn {
+      width: 100%;
+      padding: 12px 20px;
     }
   }
 
@@ -1261,16 +1313,31 @@
     }
 
     .hero {
-      height: 75vh;
-      min-height: 420px;
+      height: 100dvh;
+      min-height: unset;
+      max-height: unset;
+    }
+
+    .hero-content {
+      justify-content: flex-end;
+      padding-bottom: 70px;
+    }
+
+    .hero-content .hero-text-wrapper {
+      padding: 16px;
+      border-radius: 12px;
+    }
+
+    .hero-dots {
+      bottom: 15px;
     }
 
     .hero h1 {
-      font-size: 28px;
+      font-size: 24px;
     }
 
     .hero-lead {
-      font-size: 15px;
+      font-size: 14px;
     }
 
     .facts-grid {
@@ -1429,14 +1496,16 @@
           </div>
           <div class="hero-overlay"></div>
           <div class="hero-content">
-            <p class="hero-eyebrow">Boarding Programme &middot; Schaffhausen, Switzerland</p>
-            <h1>Rethinking boarding for ages 14-19: neighbourhood-style living, IB excellence, and global readiness in Switzerland</h1>
-            <p class="hero-lead">
-              A boarding experience that blends academic excellence with real-world readiness, fostering independence, responsibility, and meaningful community connection.
-            </p>
-            <div class="hero-buttons">
-              <a href="https://login.theherd.agency/v2/preview/sSoLWaUH6aZBcxj4lnMN?notrack=true" class="btn btn--primary">Enquire now</a>
-              <a href="#programme" class="btn btn--secondary">Discover boarding</a>
+            <div class="hero-text-wrapper">
+              <p class="hero-eyebrow">Boarding Programme &middot; Schaffhausen, Switzerland</p>
+              <h1>Rethinking boarding for ages 14-19: neighbourhood-style living, IB excellence, and global readiness in Switzerland</h1>
+              <p class="hero-lead">
+                A boarding experience that blends academic excellence with real-world readiness, fostering independence, responsibility, and meaningful community connection.
+              </p>
+              <div class="hero-buttons">
+                <a href="https://login.theherd.agency/v2/preview/sSoLWaUH6aZBcxj4lnMN?notrack=true" class="btn btn--primary">Enquire now</a>
+                <a href="#programme" class="btn btn--secondary">Discover boarding</a>
+              </div>
             </div>
           </div>
           <div class="hero-dots" id="heroDots">
@@ -1460,7 +1529,7 @@
                 <span class="fact-text">Top IB score</span>
               </div>
               <div class="fact-item">
-                <span class="fact-number">30+</span>
+                <span class="fact-number">40</span>
                 <span class="fact-text">Nationalities</span>
               </div>
               <div class="fact-item">
@@ -1474,17 +1543,17 @@
         <!-- Why ISSH -->
         <section id="why-issh" class="section section--beige">
           <div class="container">
-            <div class="section-header">
-              <p class="section-label">Why ISSH?</p>
-              <h2>More than a place to live. A place to grow.</h2>
-              <p class="section-desc">
-                The boarding programme at the International School of Schaffhausen is more than a place to live. It is a place to grow.
-                Our innovative boarding programme brings together academic excellence and real-world readiness, fostering independence,
-                personal responsibility, and meaningful connections with the local community.
-              </p>
-            </div>
             <div class="split-layout">
               <div class="split-content">
+                <p class="section-label">Why ISSH?</p>
+                <h2>More than a place to live. A place to grow.</h2>
+                <p class="section-desc">
+                  The boarding programme at the International School of Schaffhausen is more
+than a place to live. It's a place to grow. Our innovative boarding programme
+brings together academic excellence and real-world readiness, fostering
+independence, personal responsibility, and creating meaningful connections with
+the local community.
+                </p>
                 <ul class="feature-list">
                   <li>IB excellence with a 100% pass rate and above-global-average scores</li>
                   <li>An innovative, skills-based boarding curriculum focusing on academic excellence and personal development</li>
@@ -1518,13 +1587,12 @@
                 />
               </div>
               <div class="split-content">
-                <p class="section-label">The Programme</p>
-                <h2>Swiss boarding school, reimagined</h2>
+                <p class="section-label">Boarding programme</p>
+                <h2>Neighbourhood style boarding</h2>
                 <p>
-                  The ISSH boarding programme offers a unique, neighbourhood-style, off-campus living
-                  experience. One of the only schools in Switzerland to offer this model, we focus on
-                  fostering independence, developing personal responsibility, and creating meaningful
-                  connections with the local community.
+                 Boarding at ISSH goes beyond accommodation. Our purpose-built programme
+offers unparalleled individual attention, guiding students towards independence
+and responsibility while offering an authentic Swiss experience.
                 </p>
                 <ul class="feature-list">
                   <li>Skill development for university readiness</li>
@@ -1613,8 +1681,8 @@
                   <span class="stat-label">Top IB score</span>
                 </div>
                 <div class="stat-circle">
-                  <span class="stat-value">Top 100</span>
-                  <span class="stat-label">University placements</span>
+                  <span class="stat-value">33%</span>
+                  <span class="stat-label">global top 100 universities</span>
                 </div>
               </div>
             </div>
@@ -1679,7 +1747,7 @@
                   <li>Guidance in routines, wellbeing, and independence</li>
                   <li>Close collaboration with families and academic staff</li>
                 </ul>
-                <a href="https://login.theherd.agency/v2/preview/sSoLWaUH6aZBcxj4lnMN?notrack=true" class="btn btn--navy-outline">Meet the team</a>
+                <a href="https://login.theherd.agency/v2/preview/sSoLWaUH6aZBcxj4lnMN?notrack=true" class="btn btn--navy-outline">Enquire now</a>
               </div>
             </div>
           </div>

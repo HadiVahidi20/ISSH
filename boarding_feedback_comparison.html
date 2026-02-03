@@ -1,176 +1,226 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ISSH Boarding Landing Page – Feedback Comparison</title>
-  <style>
-    :root {
-      --navy: #0b2a60;
-      --teal: #015f6a;
-      --beige: #f4f2ef;
-      --ink: #1a1a1a;
-      --muted: #5b6470;
-      --line: #e5e7eb;
-      --ok: #0f766e;
-      --warn: #b45309;
-      --bad: #b91c1c;
-      --bg: #faf9f7;
-    }
+<!-- ================================================= -->
+<!-- ISSH Boarding Feedback Comparison - GHL Custom Code -->
+<!-- ================================================= -->
+<!--                                                    -->
+<!-- HOW TO USE IN GHL:                                 -->
+<!-- 1. Paste this entire code into a "Custom Code"     -->
+<!--    (or "Code" / "HTML") element in your GHL        -->
+<!--    funnel or website page builder.                 -->
+<!-- 2. If GHL adds its own header/footer, you can keep -->
+<!--    or remove the wrapper and header below as needed. -->
+<!--                                                    -->
+<!-- ================================================= -->
 
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: var(--ink);
-      background: var(--bg);
-      line-height: 1.6;
-    }
+<style>
+  /* ===================================================
+     ISSH Boarding Feedback Comparison
+     Scoped for GHL embedding
+     =================================================== */
 
-    .page {
-      max-width: 1100px;
-      margin: 40px auto 80px;
-      padding: 0 24px;
-    }
+  /* --- GHL Full-Width Override --- */
+  .issh-wrap {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    margin-left: -50vw !important;
+    overflow-x: hidden;
+  }
 
-    header {
-      background: linear-gradient(140deg, #0b2a60 0%, #015f6a 100%);
-      color: #fff;
-      padding: 32px 28px;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(11, 42, 96, 0.2);
-    }
+  .issh-wrap {
+    --navy: #0b2a60;
+    --teal: #015f6a;
+    --beige: #f4f2ef;
+    --ink: #1a1a1a;
+    --muted: #5b6470;
+    --line: #e5e7eb;
+    --ok: #0f766e;
+    --warn: #b45309;
+    --bad: #b91c1c;
+    --bg: #faf9f7;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+  }
 
-    header h1 {
-      margin: 0 0 8px;
-      font-size: 28px;
-      font-weight: 700;
-    }
+  .issh-wrap,
+  .issh-wrap * {
+    box-sizing: border-box;
+  }
 
-    header p {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.85);
-    }
+  .issh-wrap .page {
+    max-width: 1100px;
+    margin: 40px auto 80px;
+    padding: 0 24px;
+  }
 
-    .meta {
-      margin-top: 16px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.8);
-    }
+  .issh-wrap header {
+    background: linear-gradient(140deg, #0b2a60 0%, #015f6a 100%);
+    color: #fff;
+    padding: 32px 28px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(11, 42, 96, 0.2);
+  }
 
-    .meta span {
-      padding: 6px 10px;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.08);
-    }
+  .issh-wrap header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 700;
+  }
 
-    .section {
-      margin-top: 32px;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 22px 24px;
-      box-shadow: 0 10px 24px rgba(17, 24, 39, 0.04);
-    }
+  .issh-wrap header p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+  }
 
-    .section h2 {
-      margin: 0 0 14px;
-      font-size: 20px;
-      color: var(--navy);
-    }
+  .issh-wrap .meta {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+  }
 
-    .section h3 {
-      margin: 20px 0 8px;
-      font-size: 16px;
-      color: var(--ink);
-    }
+  .issh-wrap .meta span {
+    padding: 6px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+  }
 
-    .summary-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 14px;
-      margin-top: 8px;
-    }
+  .issh-wrap .section {
+    margin-top: 32px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 24px;
+    box-shadow: 0 10px 24px rgba(17, 24, 39, 0.04);
+  }
 
-    .summary-card {
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 12px 14px;
-      background: #fff;
-    }
+  .issh-wrap .section h2 {
+    margin: 0 0 14px;
+    font-size: 20px;
+    color: var(--navy);
+  }
 
-    .summary-card strong { font-size: 20px; display: block; }
+  .issh-wrap .section h3 {
+    margin: 20px 0 8px;
+    font-size: 16px;
+    color: var(--ink);
+  }
 
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.2px;
-    }
-    .status.done { background: rgba(15, 118, 110, 0.12); color: var(--ok); }
-    .status.partial { background: rgba(180, 83, 9, 0.12); color: var(--warn); }
-    .status.todo { background: rgba(185, 28, 28, 0.12); color: var(--bad); }
+  .issh-wrap .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-top: 8px;
+  }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-      font-size: 14px;
-    }
+  .issh-wrap .summary-card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 12px 14px;
+    background: #fff;
+  }
 
-    th, td {
-      border: 1px solid var(--line);
-      padding: 10px 12px;
-      vertical-align: top;
-      text-align: left;
-    }
+  .issh-wrap .summary-card strong {
+    font-size: 20px;
+    display: block;
+  }
 
-    th { background: #f8fafc; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .issh-wrap .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
 
-    .note {
-      color: var(--muted);
-      font-size: 13px;
-    }
+  .issh-wrap .status.done {
+    background: rgba(15, 118, 110, 0.12);
+    color: var(--ok);
+  }
 
-    .replace-block {
-      background: #f8fafc;
-      border: 1px dashed var(--line);
-      border-radius: 10px;
-      padding: 12px;
-      margin-top: 8px;
-      font-size: 13px;
-    }
+  .issh-wrap .status.partial {
+    background: rgba(180, 83, 9, 0.12);
+    color: var(--warn);
+  }
 
-    .replace-block strong { color: var(--navy); }
+  .issh-wrap .status.todo {
+    background: rgba(185, 28, 28, 0.12);
+    color: var(--bad);
+  }
 
-    .pill {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 6px;
-      font-size: 12px;
-      background: #eef2ff;
-      color: #4338ca;
-      margin-left: 6px;
-    }
+  .issh-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+  }
 
-    .list {
-      padding-left: 18px;
-    }
+  .issh-wrap th,
+  .issh-wrap td {
+    border: 1px solid var(--line);
+    padding: 10px 12px;
+    vertical-align: top;
+    text-align: left;
+  }
 
-    .list li { margin: 4px 0; }
+  .issh-wrap th {
+    background: #f8fafc;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
 
-    .small { font-size: 12px; color: var(--muted); }
-  </style>
-</head>
-<body>
+  .issh-wrap .note {
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .issh-wrap .replace-block {
+    background: #f8fafc;
+    border: 1px dashed var(--line);
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 8px;
+    font-size: 13px;
+  }
+
+  .issh-wrap .replace-block strong {
+    color: var(--navy);
+  }
+
+  .issh-wrap .pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    background: #eef2ff;
+    color: #4338ca;
+    margin-left: 6px;
+  }
+
+  .issh-wrap .list {
+    padding-left: 18px;
+  }
+
+  .issh-wrap .list li {
+    margin: 4px 0;
+  }
+
+  .issh-wrap .small {
+    font-size: 12px;
+    color: var(--muted);
+  }
+</style>
+
+<div class="issh-wrap">
   <div class="page">
     <header>
       <h1>ISSH Boarding Landing Page – Feedback Comparison</h1>
@@ -368,5 +418,4 @@
       </ul>
     </section>
   </div>
-</body>
-</html>
+</div>
